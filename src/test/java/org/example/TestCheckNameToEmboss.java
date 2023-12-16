@@ -1,5 +1,6 @@
 package org.example;
 
+import io.qameta.allure.Step;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -15,6 +16,7 @@ public class TestCheckNameToEmboss {
     public boolean answerExpected;
 
     @Parameterized.Parameters(name = "Тест {index}: для строки {0} нужно получить ответ {1}")
+    @Step("Проверка строки для имени владельца карты")
     public static Object[][] data() {
         return new Object[][]{
                 {"ANNA", false},
